@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+			integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="css/styles.css" />
+		<title>Product Landing Page</title>
+	</head>
+	<body>
+		
+			<header id="header" >
+				<nav id="nav-bar" class="nav-bar">
+					
+						<img
+							id="header-img"
+							src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png"
+							alt="Product Logo"
+						/>
+						<ul>
+							<li>
+								<a href="#features" class="nav-link">
+									Features</a
+								>
+							</li>
+							<li>
+								<a href="#how_it_works" class="nav-link"
+									>How&nbspit&nbspworks</a
+								>
+							</li>
+							<li>
+								<a href="#pricing" class="nav-link">Pricing</a>
+							</li>
+						</ul>
+					
+				</nav>
+
+                <div class="container">
+				<div class="header-form">
+					<h1>Handcrafted, home-made masterpieces</h1>
+					<form id="form" action="submit">
+						<input
+							id="email"
+							type="email"
+							name="email"
+							placeholder="Enter your email address"
+							required
+						/>
+						<input
+							type="submit"
+							id="submit"
+							href="https://www.freecodecamp.com/email-submit"
+							value="Get Started"
+						/>
+					</form>
+				</div>
+			</header>
+
+			<!-- Features -->
+			<section id="features">
+				<div class="features ft">
+					<i class="fa fa-fire fa-3x"></i>
+					<article>
+						<p class="p-head">Premium Materials</p>
+						<p>
+							Our trombones use the shiniest brass which is
+							sourced locally. This will increase the longevity of
+							your purchase.
+						</p>
+					</article>
+				</div>
+				<div class="features ft">
+					<i class="fa fa-truck fa-3x"></i>
+					<article>
+						<p class="p-head">Fast Shipping</p>
+						<p>
+							We make sure you recieve your trombone as soon as we
+							have finished making it. We also provide free
+							returns if you are not satisfied.
+						</p>
+					</article>
+				</div>
+				<div class="features ft">
+					<i class="fa fa-battery-full fa-3x"></i>
+					<article>
+						<p class="p-head">Quality Assurance</p>
+						<p>
+							For every purchase you make, we will ensure there
+							are no damages or faults and we will check and test
+							the pitch of your instrument.
+						</p>
+					</article>
+				</div>
+			</section>
+
+			<!-- How it work  -->
+			<section id="how_it_works">
+				<div class="video">
+					<iframe
+						id="video"
+						width="560"
+						height="315"
+						src="https://www.youtube.com/embed/y8Yv4pnO7qc"
+						title="Roman Carnival Overture Op. 9 for Five Trombones"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+					></iframe>
+				</div>
+			</section>
+
+			<!-- Pricing -->
+			<section id="pricing">
+				<div class="position">
+					<div>
+						<h2>TENOR TROMBONE</h2>
+						<p><b>$600</b></p>
+						<p>Lorem ipsum.</p>
+						<p>Lorem ipsum.</p>
+						<p>Lorem ipsum dolor.</p>
+						<p>Lorem ipsum.</p>
+                        <button class="btn">SELECT</button>
+					</div>
+					<div>
+						<h2>BASS TROMBONE</h2>
+						<p><b>$900</b></p>
+						<p>Lorem ipsum.</p>
+						<p>Lorem ipsum.</p>
+						<p>Lorem ipsum dolor.</p>
+						<p>Lorem ipsum.</p>
+                        <button class="btn">SELECT</button>
+					</div>
+					<div>
+						<h2>VALVE TROMBONE</h2>
+						<p><b>$1200</b></p>
+						<p>Lorem ipsum.</p>
+						<p>Lorem ipsum.</p>
+						<p>Lorem ipsum dolor.</p>
+						<p>Lorem ipsum.</p>
+                        <button class="btn">SELECT</button>
+					</div>
+				</div>
+			</section>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <ul>
+                    <li><a href="index.html">Privacy</a></li>
+                    <li><a href="index.html">Terms</a></li>
+                    <li><a href="index.html">Contact</a></li>
+                </ul>
+                <p>&copy Copyright 2016, Original Trombones</p>
+            </footer>
+		</div>
+
+        <!-- Jquery script for smooth scrolling -->
+		<script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"
+    ></script>
+
+
+    <script>
+// Smooth Scrolling
+$("#nav-bar a, .btn").on("click", function (e) {
+				if (this.hash !== "") {
+					e.preventDefault();
+
+					const hash = this.hash;
+
+					$("html, body").animate(
+						{
+							scrollTop: $(hash).offset().top - 100,
+						},
+						800
+					);
+				}
+			});
+    </script>
+	</body>
+</html>
